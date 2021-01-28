@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" type="image/png" href="~/img/favicon.png" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <header>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="GradeCalc">Grade Calculator</a></li>
+            </ul>
+        </menu>
+
+        <h1>@ViewBag.Name</h1>
+        <h3>@ViewBag.Subtitle</h3>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <br /><br />
+        <h5><i>Hey now, you're an all-star.</i></h5>
+    </footer>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/gradecalc.js"></script>
+</body>
+</html>
+
